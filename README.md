@@ -2,7 +2,4 @@
 
 # Nesse Questionário colocamos em prática:
 
--Java Script
--HTML
--CSS
--GitHub
+Java Script   HTML   CSS   GitHub
