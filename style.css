@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&display=swap');
+
+
+*, root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Inter', sans-serif;
+  font-synthesis: nome;
+  text-rendering: optimizeLegibility;
+  -webkit-fot-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* cor de fundo*/
+body{
+  background-color: #0f172A;
+}
+
+
+main {
+  padding: 20px;
+  max-width: 640px;
+  margin: 0 auto 64px;
+}
+
+header{
+  margin-top: 64px;
+  padding-bottom: 24px;
+  border-bottom:  1px solid #334155;
+}
+
+header h1{
+  /* espaço logo do titulo central*/
+  margin-top: 24px;
+
+  font-size: 30px;
+  color: #f1f5f9;
+}
+
+#quiz{
+  counter-reset: quiz-item;
+}
+
+
+.quiz-item{
+  margin-top: 24px;
+  border: 1px solid #475569;
+  border-radius: 6px;
+
+  /* esconda o desbordamento*/
+  overflow: hidden;
+}
+
+.quiz-item h3{
+  padding: 16px 20px;
+  
+  /* cor - titulos*/
+  color: #e2e8f0;
+
+  /* colocamos lado a lado a numeração das questões*/
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background-color: #1e293b;
+}
+
+  /* numerando as questões*/
+.quiz-item h3:before{
+  counter-increment: quiz-item;
+  content: counter(quiz-item);
+
+  background-color: #475569;
+  width: 28px;
+  height: 28px;
+  font-size: 12px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* não quero que estique*/
+  flex-shrink: 0;
+}
+
+
+
+.quiz-item dl{
+  padding: 20px 24px;
+  
+  display: grid;
+  gap: 8px;
+}
+
+.quiz-item dl dt{
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  /* cor - questões*/
+  color: #e2e3f0;
+}
+
+input {
+  all: unset;
+  border: 1px solid #94A3B8;
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+
+  /*botão das escolhas*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+input:checked{
+  border: 1px solid #A3E635;
+}
+
+input:checked:before{
+  content: "";
+  width: 10px;
+  height: 10px;
+
+  /* cor - botão das eescoolhas*/
+  background-color: rgb(190, 83, 190);
+  border-radius: 50% ;
+}
+
+#acertos {
+  text-align: center;
+  background-color: rgb(190, 83, 190);
+ 
+/* Declaraçõoes de "Acertos 0 de 10"*/
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 9px;
+
+}
